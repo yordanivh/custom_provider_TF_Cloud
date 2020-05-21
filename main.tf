@@ -1,14 +1,3 @@
-terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "yordanh_free"
-
-    workspaces {
-      name = "aaaaa"
-    }
-  }
-} 
-
 provider "environment" {}
 
 data "environment_variable" "tfc_run" {
