@@ -12,6 +12,12 @@ data "environment_variable" "commit" {
  normalize_file_path = true
 }
 
+resource "null_resource" "smart" {
+    triggers = {
+        uuid = uuid()
+    }
+ }
+
 output "value_branch" {
     value = data.environment_variable.branch.value
 }
