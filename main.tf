@@ -12,10 +12,10 @@ data "environment_variable" "commit" {
  normalize_file_path = true
 }
 
-output "value" {
+output "value_branch" {
     value = data.environment_variable.branch.value
 }
 
-output "value" {
+output "value_commit" {
      value = data.environment_variable.commit.value
  }
