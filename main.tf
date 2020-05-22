@@ -1,3 +1,15 @@
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "atanasc-free"
+
+    workspaces {
+      name = "custom-provider-environment"
+    }
+  }
+}
+
+
 provider "environment" {}
 
 data "environment_variable" "branch" {
