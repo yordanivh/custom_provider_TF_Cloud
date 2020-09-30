@@ -1,4 +1,4 @@
-provider "environment" {}
+provider "environment_16.23-alpha" {}
 
 data "environment_variable" "branch" {
  name = "TFC_CONFIGURATION_VERSION_GIT_BRANCH"
